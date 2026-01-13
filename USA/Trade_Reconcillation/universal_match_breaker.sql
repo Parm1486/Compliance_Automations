@@ -1,5 +1,5 @@
 -- Universal Match & Break Reporter
--- To identify if a trade is 'Matched', 'Price_Break', or 'Quantity_Break'
+-- Purpose: To identify if a trade is 'Matched', 'Price_Break', or 'Quantity_Break'
 
 SELECT 
     i.Trade_ID,
