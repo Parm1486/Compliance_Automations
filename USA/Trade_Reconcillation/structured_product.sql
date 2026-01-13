@@ -1,5 +1,5 @@
 -- Structured Products Reconciliation
--- Focus: Barrier Levels and Model Types
+-- Purpose: Barrier Levels and Model Types
 
 SELECT 
     i.Note_ID,
@@ -14,7 +14,7 @@ JOIN Issuer_Valuation_Report e ON i.Note_ID = e.Note_ID
 WHERE i.Is_Barrier_Triggered <> e.Is_Barrier_Triggered
    OR i.Valuation_Model_Type <> e.Valuation_Model_Type;
 
--- Focus: Barrier Levels and Strike Prices 
+-- Purpose: Barrier Levels and Strike Prices 
 
 SELECT 
     i.Tranche_ID,
