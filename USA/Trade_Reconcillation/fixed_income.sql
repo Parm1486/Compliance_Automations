@@ -1,5 +1,5 @@
 -- Fixed Income (Bond) Reconciliation
--- Focus: Accrued Interest Mismatches
+-- Purpose: Accrued Interest Mismatches
 
 SELECT 
     i.ISIN,
@@ -13,7 +13,7 @@ JOIN Broker_Margin_Report e ON i.ISIN = e.ISIN
 WHERE ABS(i.Internal_Accrued_Interest - e.External_Accrued_Interest) > 1000;
 
 
--- Focus: ISIN identification and Accrued Interest accuracy
+-- Purpose: ISIN identification and Accrued Interest accuracy
 
 SELECT 
     i.Trade_ID,
