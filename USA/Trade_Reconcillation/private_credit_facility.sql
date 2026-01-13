@@ -1,5 +1,5 @@
 -- Private Credit PIK Reconciliation
--- Focus: Verify that the Loan Balance increased correctly by the PIK amount
+-- Purpose: Verify that the Loan Balance increased correctly by the PIK amount
 
 SELECT 
     i.Facility_ID,
@@ -15,7 +15,7 @@ JOIN Agent_Bank_Position_Report a ON i.Facility_ID = a.Facility_ID
 WHERE ABS((i.Opening_Principal + i.PIK_Interest_Accrued) - a.Agent_Reported_Balance) > 1.00; -- Even a $1 break is investigated
 
 
--- Focus: Covenant Breach Detector
+-- Purpose: Covenant Breach Detector
 
 SELECT 
     l.Loan_ID,
@@ -32,7 +32,7 @@ JOIN Borrower_Financials_Staging f ON l.Borrower_ID = f.Borrower_ID
 WHERE f.Report_Period = 'Q4-2025';
 
 
--- Focus: Funded/Unfunded, Rate Calculation, and Frequency Check
+-- Purpose: Funded/Unfunded, Rate Calculation, and Frequency Check
 
 SELECT 
     i.Facility_ID,
