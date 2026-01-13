@@ -1,5 +1,5 @@
 -- Collateral Management
--- Focus: Calculate the 'Adjusted Value' of collateral after applying Haircuts (Market_Value * (1 - Haircut)).
+-- Purpose: Calculate the 'Adjusted Value' of collateral after applying Haircuts (Market_Value * (1 - Haircut)).
 
 SELECT 
     Asset_ID,
