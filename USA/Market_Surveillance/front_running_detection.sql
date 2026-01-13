@@ -1,5 +1,5 @@
 -- Front Running Detection 
--- Goal: To identify trades occuring within 30 mins of a client trade. 
+-- Purpose: To identify trades occuring within 30 mins of a client trade. 
 -- Execution: Reconcile Personal_Trade and Client_Trade files to see if there is any trade occured in same ticker within 30 minutes.
 
 SELECT 
