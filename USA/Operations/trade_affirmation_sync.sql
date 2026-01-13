@@ -1,5 +1,5 @@
 -- Trade Affirmation Sync
--- Focus: Match internal trade status against the External Matching Platform (e.g., DTCC).
+-- Purpose: Match internal trade status against the External Matching Platform (e.g., DTCC).
 
 SELECT 
     i.Trade_ID,
