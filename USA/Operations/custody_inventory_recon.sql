@@ -1,5 +1,5 @@
 -- Custody Inventory Reconciliation
--- Focus: Daily reconciliation of internal book-entry vs Custodian's actual vault/CSD record.
+-- Purpose: Daily reconciliation of internal book-entry vs Custodian's actual vault/CSD record.
 
 SELECT 
     i.Account_Number,
