@@ -1,5 +1,5 @@
 -- Wash Trading & Spoofing Detector
--- Focus: Finding trades where Buyer = Seller OR High Cancel-to-Trade Ratio
+-- Purpose: Finding trades where Buyer = Seller OR High Cancel-to-Trade Ratio
 
 -- Wash Trading Check
 
