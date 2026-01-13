@@ -1,5 +1,5 @@
 -- Corporate Action Normalization
--- Focus: Match trades even if a stock split has occurred
+-- Purpose: Match trades even if a stock split has occurred
 
 SELECT 
     i.Ticker,
