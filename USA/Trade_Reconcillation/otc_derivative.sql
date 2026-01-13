@@ -13,6 +13,18 @@ JOIN Counterparty_Confirm b ON i.Trade_ID = b.Trade_ID
 WHERE i.Fixed_Rate <> b.Fixed_Rate 
    OR i.Termination_Date <> b.Termination_Date;
 
+-- Focus: Base Rate Reset Auditor
+SELECT 
+    l.Loan_ID,
+    l.Next_Reset_Date,
+    l.Current_All_In_Rate AS System_Rate,
+    (m.Market_Rate + l.Spread) AS Expected_All_In_Rate,
+    ABS(l.Current_All_In_Rate - (m.Market_Rate + l.Spread)) AS Rate_Variance
+FROM Loan_Master l
+JOIN Market_Rates_Daily m ON l.Base_Rate_Index = m.Index_Name
+WHERE m.Effective_Date = l.Last_Reset_Date
+  AND ABS(l.Current_All_In_Rate - (m.Market_Rate + l.Spread)) > 0.0001; -- 1 Basis Point
+
 -- Focus: On dates, floating rates and maturity which are critical for derivatives
 
 SELECT 
