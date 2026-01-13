@@ -1,5 +1,5 @@
 -- Trade Reconciliation 
--- Identify discrepancies between Internal_Books and Broker_Records
+-- Purpose: Identify discrepancies between Internal_Books and Broker_Records
 
 SELECT
 	i.Trade_ID,
