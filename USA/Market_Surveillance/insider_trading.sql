@@ -1,5 +1,5 @@
 -- Insider Trading "Event Window" Detector
--- Focus: Match private employee trades against firm-wide "Restricted List" events
+-- Purpose: Match private employee trades against firm-wide "Restricted List" events
 
 SELECT 
     t.Employee_ID,
