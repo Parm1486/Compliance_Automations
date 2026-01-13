@@ -1,5 +1,5 @@
 -- AML "Structuring" Detection
--- Focus: Find entities making multiple deposits just below the $10,000 reporting threshold
+-- Purpose: Find entities making multiple deposits just below the $10,000 reporting threshold
 
 SELECT 
     Entity_ID, 
