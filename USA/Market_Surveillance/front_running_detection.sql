@@ -15,3 +15,4 @@ WHERE p.Action = 'BUY'
   AND p.Timestamp < c.Timestamp
   AND c.Timestamp <= (p.Timestamp + INTERVAL '30 minutes');
      
+front_running_detection.sql
