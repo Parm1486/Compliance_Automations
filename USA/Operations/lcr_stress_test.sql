@@ -1,5 +1,5 @@
 -- LCR "Stress Test" Monitor
--- Focus: Aggregate liquid assets vs. 30-day projected outflows
+-- Purpose: Aggregate liquid assets vs. 30-day projected outflows
 
 SELECT 
     (SUM(CASE WHEN Asset_Type = 'Level 1 HQLA' THEN Market_Value * 1.0 
