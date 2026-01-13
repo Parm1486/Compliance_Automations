@@ -1,3 +1,5 @@
+## Purpose: Moving from simple monitoring to System Orchestration
+
 import sqlite3
 import pandas as pd
 import os
