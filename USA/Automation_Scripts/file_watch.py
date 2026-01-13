@@ -1,4 +1,4 @@
-## Focus: Create a script that looks for a file named daily_position_report.csv
+## Purpose: Create a script that looks for a file named daily_position_report.csv
 
 import os
 import pandas as pd
