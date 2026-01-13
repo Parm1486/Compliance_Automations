@@ -1,5 +1,5 @@
 -- Lifecycle & Identity Auditor
--- Focus: Finding Version Mismatches and Legal Entity Errors
+-- Purpose: Finding Version Mismatches and Legal Entity Errors
 
 SELECT 
     i.Trade_ID,
@@ -19,7 +19,7 @@ WHERE i.Internal_Version_No <> e.External_Version_No
 
 
 -- Platform Synchronization Check
--- Focus: Find trades confirmed in DTCC but missing from the Portfolio
+-- Purpose: Find trades confirmed in DTCC but missing from the Portfolio
 
 SELECT 
     d.DTCC_Control_Number,
@@ -31,7 +31,7 @@ WHERE c.Trade_ID IS NULL -- Trade exists in DTCC but not in their report
   AND d.Status = 'MATCHED';
 
 -- Timing & Maturity Monitor
--- Focus: Upcoming maturities and 'Pending' vs 'Confirmed' status
+-- Purpose: Upcoming maturities and 'Pending' vs 'Confirmed' status
 
 SELECT 
     Trade_ID,
@@ -44,7 +44,7 @@ WHERE Maturity_Date <= DATE_ADD(CURDATE(), INTERVAL 5 DAY) -- Upcoming Maturitie
    OR Booking_Status = 'PRELIMINARY'; -- Unconfirmed/Ghost Trades
 
 -- Model Hierarchy Auditor
--- Focus: Highlight where the Price difference is due to Model Methodology
+-- Purpose: Highlight where the Price difference is due to Model Methodology
 
 SELECT 
     i.Asset_ID,
