@@ -1,5 +1,5 @@
 -- Rogue Trader Detection
--- Focus: Find trades where the price was manually changed by a user, not a feed
+-- Purpose: Find trades where the price was manually changed by a user, not a feed
 
 SELECT 
     Trade_ID,
