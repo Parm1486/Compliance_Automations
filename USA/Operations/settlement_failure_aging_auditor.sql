@@ -1,5 +1,5 @@
 -- Settlement Failure & Aging Auditor
--- Focus: Identify failed trades and calculate the financial penalty (cost of carry)
+-- Purpose: Identify failed trades and calculate the financial penalty (cost of carry)
 
 SELECT 
     Trade_ID, Counterparty, Asset_Class, Settlement_Date,
@@ -11,7 +11,7 @@ WHERE Status = 'FAILED'
   AND Settlement_Date < CURRENT_DATE;
 
 -- Settlement Fail Monitor
--- Focus: Identify trades past their contractual settlement date and calculate penalty costs.
+-- Purpose: Identify trades past their contractual settlement date and calculate penalty costs.
 
 SELECT 
     Trade_ID, 
