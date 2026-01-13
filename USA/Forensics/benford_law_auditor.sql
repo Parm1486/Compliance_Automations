@@ -1,5 +1,5 @@
 -- Benford's Law Forensic Auditor
--- Focus: Compare actual distribution of first digits vs. theoretical Benford distribution
+-- Purpose: Compare actual distribution of first digits vs. theoretical Benford distribution
 
 WITH First_Digits AS (
     SELECT 
