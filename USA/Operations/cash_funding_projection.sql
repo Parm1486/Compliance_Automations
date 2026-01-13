@@ -1,5 +1,5 @@
 -- Cash Management & Funding
--- Logic: Projecting End-of-Day (EOD) Nostro balances based on pending wires.
+-- Purpose: Projecting End-of-Day (EOD) Nostro balances based on pending wires.
 
 SELECT 
     Account_ID,
