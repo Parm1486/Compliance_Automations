@@ -1,5 +1,5 @@
 -- Pre-Settlement Liquidity Check
--- Focus: Ensure cash in Nostro account covers today's outgoing wires
+-- Purpose: Ensure cash in Nostro account covers today's outgoing wires
 
 SELECT 
     Account_ID,
